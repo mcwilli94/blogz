@@ -4,6 +4,7 @@
 
 <center><h1>{{ blog.title }}</center></h1>
 <p>{{ blog.body }}</p>
+<font size="2"><i>written by&nbsp;<a href="/blog?user={{ blog.owner.username }}">{{ blog.owner.username }}</a></i></font>
 
 
 {% endblock %}

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1><center>Register an Account</center></h1>
+
+<p>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    {% for message in messages %}
+<p class="error">{{ message }}</p>
+    {% endfor %}
+{% endif %}
+{% endwith %}
+</p>
+
+<form action="/signup" method="post">
+    <table>
+        <tr>
+            <td><label for="email">Email</label></td>
+            <td>
+                <input name="email" type="email" value="{{ email }}" required>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="password">Password</label></td>
+            <td>
+                <input name="password" type="password" required>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="verify">Verify Password</label></td>
+            <td>
+                <input name="verify" type="password" required>
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Register">
+</form>
+
+{% endblock %}

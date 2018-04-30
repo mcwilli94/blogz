@@ -2,15 +2,36 @@
 <html>
     <head>
         <title>Build a Blog</title>
+        <style type="text/css">
+            .error {
+                color: red;
+            }
+        </style>
     </head>
 
     
     <body>
-        <table >
+        <table cellspacing="10">
             <tr>
-                <th><a href="/" alt="Link Not Available">Main Blog Page</a></th>
+                <th><a href="/" alt="Link Not Available">Home Page</a></th>
+                <th><a href="/blog" alt="Link Not Available">Main Blog Page</a></th>
                 <th><a href="/newpost" alt="Link Not Available">Add a Blog Entry</a></th>
+                <th width=65%></th>
+                <th align="right"><a href="/login" alt="Link Not Available">Login</a></th>
             </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th align="right"><a href="/logout" alter="Link Not Available">Logout</a></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th align="left"><a href="/signup" alt="Link Not Available">Create an Account</a></th>
         </table>
         {% block content %}
         {% endblock %}

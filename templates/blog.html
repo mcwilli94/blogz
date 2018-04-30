@@ -7,6 +7,7 @@
 {% for item in all_posts %}
     <h2><a href="/individualblog?id={{ item.id }}">{{ item.title }}</a></h2>
     <p>{{ item.body }}</p>
+    <font size="2"><i>written by&nbsp;<a href="/blog?user={{ item.owner.username }}">{{ item.owner.username }}</a></i></font>
     <br><br>
 {% endfor %}
 
